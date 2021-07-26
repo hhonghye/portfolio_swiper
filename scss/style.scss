@@ -1,2 +1,74 @@
 @charset "UTF-8";
 @import "reset";
+
+#swiper-container{
+    width: 100%; height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .background li{
+        position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-position: 9999px;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &::before, &::after{
+            content: ""; 
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: inherit;
+            background-repeat: inherit;
+            background-size: inherit;
+            transition: 0.5s ease;
+        }
+        &::before{
+            clip-path: inset(0% 100% 50% 0%);
+        }
+        &::after{
+            clip-path: inset(50% 100% 0% 0%);
+            transition-delay: 0.2s;
+        }
+        &.on::before{
+            clip-path: inset(0% 0% 50% 0%);
+        }
+        &.on::after{
+            clip-path: inset(50% 0% 0% 0%);
+        }
+
+        &:nth-of-type(1){background-image: url(../img/bg1.jpg);}
+        &:nth-of-type(2){background-image: url(../img/bg2.jpg);}
+        &:nth-of-type(3){background-image: url(../img/bg3.jpg);}
+        &:nth-of-type(4){background-image: url(../img/bg4.jpg);}
+    }
+
+    .swiper-wrapper{
+        width: 100%; height: 100%;
+        position: absolute; top: 0; left: 0;
+
+        .swiper-slide{
+            width: 100%; height: 100%;
+            .inner{
+                width: 100%; height: 100%; 
+                padding: 100px; box-sizing: border-box;
+                h2{
+                    font: 100px/1 "arial"; color: #fff;
+                }
+            }
+        }
+
+    }
+    .swiper-pagination{
+        position: absolute;
+        left: 100px; bottom: 100px;
+        width: auto;
+        text-align: left;
+        span{
+            width: auto; height: auto; border-radius: none;
+            background: transparent;
+            display: block;
+            margin-top: 20px;
+            font: bold 21px/1 "arial";
+        }
+    }
+}
