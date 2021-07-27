@@ -3,6 +3,21 @@
 @import "mixin";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
 
+h1{
+    position: fixed; top: 50px; left: 50px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
+    z-index: 5;
+    a{
+        display: block;
+        width: 46px; height: 46px;
+        background: #fff;
+        border-radius: 5px;
+        text-align: center;
+        @include font($s: 21px, $lh: 46px, $c: rgba(39, 39, 39, 0.5));
+        cursor: pointer;
+    }
+}
+
 #swiper-container{
     width: 100%; height: 100vh;
     position: relative;
@@ -25,41 +40,25 @@
         &:nth-of-type(4){@include bg($img: url(../img/bg4.jpg))}
     }
 
-    h1{
-        position: fixed; top: 80px; left: 80px;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
-        z-index: 5;
-        a{
-            display: block;
-            width: 46px; height: 46px;
-            background: #fff;
-            border-radius: 5px;
-            line-height: 46px;
-            text-align: center;
-            cursor: pointer;
-            svg{
-                @include font($s: 21px, $c: rgba(39, 39, 39, 0.5));
-            }
-
-        }
-    }
-    
     .swiper-wrapper{
         width: 100%; height: 100%;
-        position: absolute; top: 0; left: 0;
-
         .swiper-slide{
+            // width: 90%; height: 75%;
+            // top: 16vh;
             width: 100%; height: 100%;
+            padding: 100px; box-sizing: border-box;
+            overflow: hidden;
+            position: relative;
             .inner{
                 width: 100%; height: 100%; 
-                padding: 100px; box-sizing: border-box;
-                // h2{@include font($s: 100px, $c: #fff);}
-
-
+                border: 1px solid red;
+                
             }
+
         }
 
     }
+
     .swiper-button-prev, .swiper-button-next{
         width: 60px; height: 60px;
         &::before{
@@ -82,11 +81,11 @@
             animation: rotate 1s ease infinite;
         }
     } 
-    .swiper-button-prev{top: auto; left: auto; bottom: 80px; right: 180px;}
-    .swiper-button-next{top: auto; left: auto; bottom: 80px; right: 80px;}
+    .swiper-button-prev{top: auto; left: auto; bottom: 50px; right: 180px;}
+    .swiper-button-next{top: auto; left: auto; bottom: 50px; right: 80px;}
     .swiper-pagination{
         position: absolute;
-        top: 95px; left: 180px; bottom: auto;
+        top: 65px; left: 150px; bottom: auto;
         width: auto;
         text-align: right;
         span{
