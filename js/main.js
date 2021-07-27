@@ -13,7 +13,7 @@ const swiper = new Swiper('#swiper-container', {
 
     pagination: {
       el: '.swiper-pagination',
-    //   type: "bullets",
+      type: "bullets",
       clickable: true,
       renderBullet: function(index, className){
         return `<span class="${className}">${menu[index]}</span>`

@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import "reset";
+@import "mixin";
 
 #swiper-container{
     width: 100%; height: 100vh;
@@ -9,14 +10,12 @@
     .background li{
         position: absolute; top: 0; left: 0;
         width: 100%; height: 100%;
-        background-position: 9999px;
-        background-repeat: no-repeat;
-        background-size: cover;
 
         &::before, &::after{
             content: ""; 
             position: absolute; top: 0; left: 0;
             width: 100%; height: 100%;
+            background-position: center;
             background-image: inherit;
             background-repeat: inherit;
             background-size: inherit;
@@ -36,10 +35,10 @@
             clip-path: inset(50% 0% 0% 0%);
         }
 
-        &:nth-of-type(1){background-image: url(../img/bg1.jpg);}
-        &:nth-of-type(2){background-image: url(../img/bg2.jpg);}
-        &:nth-of-type(3){background-image: url(../img/bg3.jpg);}
-        &:nth-of-type(4){background-image: url(../img/bg4.jpg);}
+        &:nth-of-type(1){@include bg($img: url(../img/bg1.jpg), $p: 9999px)}
+        &:nth-of-type(2){@include bg($img: url(../img/bg2.jpg), $p: 9999px)}
+        &:nth-of-type(3){@include bg($img: url(../img/bg3.jpg), $p: 9999px)}
+        &:nth-of-type(4){@include bg($img: url(../img/bg4.jpg), $p: 9999px)}
     }
 
     .swiper-wrapper{

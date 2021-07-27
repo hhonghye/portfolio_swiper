@@ -1,0 +1,13 @@
+@mixin font($w: normal, $s: 16px, $lh: 1, $f: arial, $c: #121212){
+    font-weight: $w;
+    font-size: $s;
+    line-height: $lh;
+    font-family: $f;
+    color: $c;
+}
+@mixin bg($img, $p: center, $s: cover){
+    background-image: $img;
+    background-position: $p;
+    background-repeat: no-repeat;
+    background-size: $s;
+}
