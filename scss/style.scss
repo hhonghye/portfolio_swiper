@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "reset";
 @import "mixin";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
 
 #swiper-container{
     width: 100%; height: 100vh;
@@ -10,37 +11,19 @@
     .background li{
         position: absolute; top: 0; left: 0;
         width: 100%; height: 100%;
+        opacity: 0;
 
-        &::before, &::after{
-            content: ""; 
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-            background-position: center;
-            background-image: inherit;
-            background-repeat: inherit;
-            background-size: inherit;
-            transition: 0.5s ease;
-        }
-        &::before{
-            clip-path: inset(0% 100% 50% 0%);
-        }
-        &::after{
-            clip-path: inset(50% 100% 0% 0%);
-            transition-delay: 0.2s;
-        }
-        &.on::before{
-            clip-path: inset(0% 0% 50% 0%);
-        }
-        &.on::after{
-            clip-path: inset(50% 0% 0% 0%);
+        
+        &.on{
+            opacity: 1;
         }
 
-        &:nth-of-type(1){@include bg($img: url(../img/bg1.jpg), $p: 9999px)}
-        &:nth-of-type(2){@include bg($img: url(../img/bg2.jpg), $p: 9999px)}
-        &:nth-of-type(3){@include bg($img: url(../img/bg3.jpg), $p: 9999px)}
-        &:nth-of-type(4){@include bg($img: url(../img/bg4.jpg), $p: 9999px)}
+        &:nth-of-type(1){@include bg($img: url(../img/bg1.jpg))}
+        &:nth-of-type(2){@include bg($img: url(../img/bg2.jpg))}
+        &:nth-of-type(3){@include bg($img: url(../img/bg3.jpg))}
+        &:nth-of-type(4){@include bg($img: url(../img/bg4.jpg))}
     }
-
+    
     .swiper-wrapper{
         width: 100%; height: 100%;
         position: absolute; top: 0; left: 0;
@@ -50,24 +33,37 @@
             .inner{
                 width: 100%; height: 100%; 
                 padding: 100px; box-sizing: border-box;
-                h2{
-                    font: 100px/1 "arial"; color: #fff;
-                }
+                // h2{@include font($s: 100px, $c: #fff);}
+
             }
         }
 
     }
+    .swiper-button-prev, .swiper-button-next{
+        top: auto; left: auto; bottom: 100px; right: 100px;
+        width: 60px; height: 60px;
+        border: 2px solid #fff;
+        border-radius: 30px;
+        &::after{
+            font-size: 28px;
+            color: #fff;
+        }
+    } 
+    .swiper-button-prev{top: auto; left: auto; bottom: 100px; right: 200px;}
+    .swiper-button-next{top: auto; left: auto; bottom: 100px; right: 100px;}
     .swiper-pagination{
         position: absolute;
-        left: 100px; bottom: 100px;
+        top: 100px; right: 100px;
+        left: auto; bottom: auto;
         width: auto;
-        text-align: left;
+        text-align: right;
         span{
             width: auto; height: auto; border-radius: none;
             background: transparent;
             display: block;
             margin-top: 20px;
-            font: bold 21px/1 "arial";
+            @include font($w: bold, $s: 21px, $c: #fff);
+
         }
     }
 }
