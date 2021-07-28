@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import "reset";
 @import "mixin";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
 
 h1{
     position: fixed; top: 50px; left: 50px;
@@ -13,10 +13,11 @@ h1{
         background: #fff;
         border-radius: 5px;
         text-align: center;
-        @include font($s: 21px, $lh: 46px, $c: rgba(39, 39, 39, 0.5));
+        @include font($s: 21px, $lh: 46px, $c: rgba(39, 39, 39, 0.3));
         cursor: pointer;
     }
 }
+
 
 #swiper-container{
     width: 100%; height: 100vh;
@@ -29,10 +30,8 @@ h1{
         transition: opacity 0.3s;
         opacity: 0;
 
-        
-        &.on{
-            opacity: 1;
-        }
+        background: #666;
+        &.on{opacity: 1;}
 
         &:nth-of-type(1){@include bg($img: url(../img/bg1.jpg))}
         &:nth-of-type(2){@include bg($img: url(../img/bg2.jpg))}
@@ -43,15 +42,56 @@ h1{
     .swiper-wrapper{
         width: 100%; height: 100%;
         .swiper-slide{
-            // width: 90%; height: 75%;
-            // top: 16vh;
             width: 100%; height: 100%;
-            padding: 100px; box-sizing: border-box;
+            padding: 100px 0; box-sizing: border-box;
             overflow: hidden;
-            position: relative;
             .inner{
                 width: 100%; height: 100%; 
-                border: 1px solid red;
+                position: relative;
+
+                &.first{
+                    .intro{
+                        position: absolute; top: 20%; left: 50px;
+                        h2{
+                            @include font($w: 700, $s:50px, $lh: 1.3, $f: "Lexend",$c: #fff);
+                            padding-bottom: 40px;
+                        }
+                        p{
+                            width: 400px;
+                            @include font($w: 100, $s: 14px, $lh: 1.75,$c: rgba(255, 255, 255, 0.7))
+                        }
+                    }
+                    .sideVid{
+                        position: absolute; top: 50%; right: -300px; margin-top: -100px;
+                        width: 400px; height: 220px;
+                        background: rgba(165, 42, 42, 0.486);
+                        transition: 0.5s ease;
+                        cursor: pointer;
+                        .circle{
+                            position: absolute; 
+                            top: 50%; right: 10px; margin-top: -25px;
+                            width: 50px; height: 50px;
+                            border-radius: 25px;
+                            border: 1px solid #fff;
+                            animation: circle 1.5s linear infinite;
+                            position: relative;
+                            // z-index: 1;
+                        }
+                        video{
+                            width: 100%; height: 100%;
+                            object-fit: cover;
+                            // z-index: 2;
+                        }
+                        &:hover{
+                            right: 40px; 
+                            transform: scale(1.2);
+                            .circle{display: none;}
+                        }
+
+                    }
+                    
+                }
+                
                 
             }
 
@@ -60,7 +100,7 @@ h1{
     }
 
     .swiper-button-prev, .swiper-button-next{
-        width: 60px; height: 60px;
+        width: 48px; height: 48px;
         &::before{
             content: "";
             position: absolute; top: 0; left: 0;
@@ -71,9 +111,9 @@ h1{
         }
         &::after{
             position: absolute; 
-            top: 50%; left: 50%; margin-top: -11px; margin-left: -4px;
+            top: 50%; left: 50%; margin-top: -8px; margin-left: -3px;
             width: inherit; height: inherit;
-            font-size: 24px;
+            font-size: 18px;
             color: #fff;
         }
         &:hover::before{
@@ -97,7 +137,7 @@ h1{
             padding-bottom: 5px;
             border-bottom: 2px solid transparent;
             transition: 0.5s;
-            @include font( $s: 16px, $c: #fff);
+            @include font($w: 400, $s: 12px, $f:"Lexend", $c: #fff);
         }
         .swiper-pagination-bullet-active{
             border-bottom: 2px solid #fff;
@@ -108,3 +148,8 @@ h1{
 }
 
 @keyframes rotate{ 100% { transform: rotate(360deg); } }
+@keyframes circle{ 
+    0%{transform: scale(0); opacity: 0;}
+    50%{transform: scale(1); opacity: 0.7;}
+    100%{transform: scale(3); opacity: 0;} 
+}

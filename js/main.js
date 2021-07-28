@@ -1,4 +1,4 @@
-const menu = ["first", "second", "third", "fourth"];
+const menu = ["PROJECTS", "COLLECTION", "VIDEOS", "CONTACT"];
 //swiper 연결
 const swiper = new Swiper('#swiper-container', {
     loop: true, 
@@ -27,9 +27,12 @@ const bgs = document.querySelectorAll(".background li");
 const prev = document.querySelector(".swiper-button-prev");
 const next = document.querySelector(".swiper-button-next");
 const navi = document.querySelectorAll(".swiper-pagination span");
+// const h2 = document.querySelectorAll(".inner .intro h2");
 
 /*----- function -----*/
-
+// for(el of h2){
+//     letter(el, 0.2);
+// }
 /*----- event -----*/
 prev.addEventListener("click", changeBg);
 next.addEventListener("click", changeBg);
@@ -52,4 +55,18 @@ function changeBg(){
         el.classList.remove("on");
     }
     bgs[i].classList.add("on");
+}
+function letter(el, interval){
+    const elem = el;
+    let txt = elem.innerText;
+
+    let result = "";
+    let i = 0;
+
+    for(let el of txt){
+        result += `<span style="transition-delay: ${interval*i}s; display: inline-block">${el}</span>`
+        i++;
+    }
+    elem.innerHTML = result;
+
 }
