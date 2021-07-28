@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100;300;400;500;600;700;800&display=swap');
 
 h1{
-    position: fixed; top: 50px; left: 50px;
+    position: fixed; top: 80px; left: 80px;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.08);
     z-index: 5;
     a{
@@ -43,57 +43,124 @@ h1{
         width: 100%; height: 100%;
         .swiper-slide{
             width: 100%; height: 100%;
-            padding: 100px 0; box-sizing: border-box;
+            // padding: 100px 0; box-sizing: border-box;
             overflow: hidden;
             .inner{
                 width: 100%; height: 100%; 
                 position: relative;
 
                 &.first{
+                    .side{
+                        width: 190px; height: 100%;
+                        display: flex; flex-direction: column;
+                        justify-content: space-evenly;
+                        a{
+                            @include font($s:14px, $c: #fff);
+                            letter-spacing: 1px;
+                            transform: rotate(-90deg);
+                            position: relative;
+                            &::after{
+                                content: "";
+                                position: absolute; top: -5px; left: 18px;
+                                width: 20px; height: 20px;
+                                border-radius: 11px;
+                                border: 1px solid #fff;
+                                animation: circle 1s linear infinite;
+                                display: none;
+                            }
+                            &:hover::after{
+                                display: block;
+                            }
+                        }
+                    }
                     .intro{
-                        position: absolute; top: 20%; left: 50px;
-                        h2{
-                            @include font($w: 700, $s:50px, $lh: 1.3, $f: "Lexend",$c: #fff);
-                            padding-bottom: 40px;
+                        position: absolute; top: 25%; left: 20vw;
+                        >h2{
+                            padding-bottom: 60px;
+                            span{
+                                display: block;
+                                @include font($w: 700, $s:50px, $lh: 1.3, $f: "Lexend",$c: #fff);
+                                clip-path: inset(100% 0% 0% 0%);
+                                opacity: 0;
+                                transition: 0.5s 0.5s;
+                                &:nth-of-type(2){transition-delay: 0.7s;}
+                                &:nth-of-type(3){transition-delay: 0.9s;}
+                            }
+                            
                         }
                         p{
-                            width: 400px;
-                            @include font($w: 100, $s: 14px, $lh: 1.75,$c: rgba(255, 255, 255, 0.7))
+                            width: 500px;
+                            @include font($s: 14px, $lh: 1.75,$c: rgba(255, 255, 255, 0.7));
+                            transform: translateY(30px);
+                            opacity: 0;
+                            transition: transform 0.5s 1.4s, opacity 0.5s 1.4s;
+                            padding-bottom: 80px;
+                        }
+                        >span{
+                            display: inline-block;
+                            border-radius: 30px;
+                            padding: 5px 20px;
+                            border: 1px solid rgba(255, 255, 255, 0.7);
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            @include font($s: 14px, $lh: 1.75,$f: "Lexend", $c: rgba(255, 255, 255, 0.7));
+                            opacity: 0;
+                            transform: translateY(30px);
+                            transition: transform 0.5s 1.6s, opacity 0.5s 1.6s;
+                            position: relative;
+                            &::after{
+                                content: "view detail";
+                                position: absolute; top: 0; left: 0;
+                                width: 100%; height: 100%;
+                                @include font($s: 14px, $lh: 2.5,$f: "Lexend", $c: rgba(0, 0, 0, 0.7));
+                                text-align: center;
+                                background: #fff; 
+                                border-radius: 30px;
+                                clip-path: inset(0% 100% 0% 0%);
+                                transition: 0.5s;
+                            }
+                            &:hover::after{clip-path: inset(0% 0% 0% 0%);}
+                            
                         }
                     }
                     .sideVid{
-                        position: absolute; top: 50%; right: -300px; margin-top: -100px;
-                        width: 400px; height: 220px;
-                        background: rgba(165, 42, 42, 0.486);
+                        position: absolute; bottom: 130px; right: 20vw; margin-top: -100px;
+                        width: 300px; height: 180px;
+                        background: #000;
                         transition: 0.5s ease;
                         cursor: pointer;
-                        .circle{
+                        svg{
                             position: absolute; 
-                            top: 50%; right: 10px; margin-top: -25px;
-                            width: 50px; height: 50px;
-                            border-radius: 25px;
-                            border: 1px solid #fff;
-                            animation: circle 1.5s linear infinite;
-                            position: relative;
-                            // z-index: 1;
+                            top: 50%; left: 50%; margin-top: -16px; margin-left: -16px;
+                            font-size: 42px; color: #fff;
+                            opacity: 1;
+                            transition: 0.5s;
                         }
                         video{
                             width: 100%; height: 100%;
                             object-fit: cover;
-                            // z-index: 2;
+                            opacity: 0.6;
                         }
                         &:hover{
-                            right: 40px; 
-                            transform: scale(1.2);
-                            .circle{display: none;}
+                            transform: scale(1.3);
+                            svg{display: none;}
                         }
 
                     }
                     
                 }
+                &.second{
+                }
                 
                 
             }
+            &.swiper-slide-active{
+                .first .intro{
+                    h2 span{clip-path: inset(0% 0% 0% 0%); opacity: 1;}
+                    p{transform: translateY(0px); opacity: 0.7;}
+                    span{transform: translateY(0px); opacity: 1;}
+                }
+            } 
 
         }
 
@@ -121,23 +188,24 @@ h1{
             animation: rotate 1s ease infinite;
         }
     } 
-    .swiper-button-prev{top: auto; left: auto; bottom: 50px; right: 180px;}
-    .swiper-button-next{top: auto; left: auto; bottom: 50px; right: 80px;}
+    .swiper-button-prev{top: auto; left: auto; bottom: 80px; right: 250px;}
+    .swiper-button-next{top: auto; left: auto; bottom: 80px; right: 150px;}
     .swiper-pagination{
         position: absolute;
-        top: 65px; left: 150px; bottom: auto;
+        top: 80px; right: 80px; bottom: auto;
+        // top: 65px; left: 150px; bottom: auto;
         width: auto;
         text-align: right;
         span{
             width: auto; height: auto; border-radius: none;
             background: transparent;
-            margin-right: 30px;
+            margin-left: 30px;
             opacity: 0.5;
             border-radius: 0; 
             padding-bottom: 5px;
             border-bottom: 2px solid transparent;
             transition: 0.5s;
-            @include font($w: 400, $s: 12px, $f:"Lexend", $c: #fff);
+            @include font($w: 400, $s: 12px, $c: #fff);
         }
         .swiper-pagination-bullet-active{
             border-bottom: 2px solid #fff;

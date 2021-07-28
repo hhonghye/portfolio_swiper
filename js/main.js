@@ -27,7 +27,7 @@ const bgs = document.querySelectorAll(".background li");
 const prev = document.querySelector(".swiper-button-prev");
 const next = document.querySelector(".swiper-button-next");
 const navi = document.querySelectorAll(".swiper-pagination span");
-// const h2 = document.querySelectorAll(".inner .intro h2");
+const h2 = document.querySelectorAll(".inner .intro h2");
 
 /*----- function -----*/
 // for(el of h2){
@@ -68,5 +68,6 @@ function letter(el, interval){
         i++;
     }
     elem.innerHTML = result;
+    console.log(elem);
 
 }
