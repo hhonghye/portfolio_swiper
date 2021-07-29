@@ -27,12 +27,12 @@ const bgs = document.querySelectorAll(".background li");
 const prev = document.querySelector(".swiper-button-prev");
 const next = document.querySelector(".swiper-button-next");
 const navi = document.querySelectorAll(".swiper-pagination span");
-const h2 = document.querySelectorAll(".inner .intro h2");
+const h3 = document.querySelectorAll(".inner div h3");
 
 /*----- function -----*/
-// for(el of h2){
-//     letter(el, 0.2);
-// }
+for(el of h3){
+    letter(el, 0.1);
+}
 /*----- event -----*/
 prev.addEventListener("click", changeBg);
 next.addEventListener("click", changeBg);
@@ -66,6 +66,7 @@ function letter(el, interval){
     for(let el of txt){
         result += `<span style="transition-delay: ${interval*i}s; display: inline-block">${el}</span>`
         i++;
+        
     }
     elem.innerHTML = result;
     console.log(elem);
