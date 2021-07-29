@@ -153,46 +153,92 @@ h1{
                     }
                 }
                 &.second{
-                    .trending{
-                        position: absolute; top: 50px; left: 13vw;
+                    padding: 50px 150px; box-sizing: border-box;
+                    .project{
+                        position: relative;
+                        width: 100%; height: 100%;
+                        border-radius: 20px;
+                        background: rgba(0, 0, 0, 0.1);
+                        backdrop-filter: blur(10px);
                         >h3{
-                            @include font($w: bold, $s: 32px, $f: "Lexend", $c: #fff);
-                            padding-bottom: 30px;
+                            position: absolute; 
+                            top: 50px; left: 50%; transform: translateX(-50%);
+                            span{
+                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
+                                transform: rotate(45deg); opacity: 0;
+                                transform-origin: left bottom;
+                                transition: 0.3s;
+                            }
                         }
                         .wrap{
-                            width: 400px; 
-                            padding: 20px; box-sizing: border-box;
-                            border-radius: 5px;
-                            background: rgba(255, 255, 255, 0.05);
-                            backdrop-filter: blur(10px);
-                            margin-bottom: 10px;
-                            img{
-                                display: block;
-                                width: 100%; height: 150px;
-                                margin-bottom: 10px;
-                                border-radius: 5px;
-                                object-fit: cover;
+                            position: absolute; top: 60%; left: 0; transform: translateY(-50%);
+                            .signpost{
+                                width: 100%;
+                                display: flex; justify-content: space-between; 
+                                padding-bottom: 50px;
+                                position: relative;
+                                //timeline
+                                &::after{
+                                    content: "";
+                                    width: 80%; height: 1px; 
+                                    position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+                                    border-top: 3px dotted #fff;
+                                    opacity: 0.3;
+                                    clip-path: inset(0% 100% 0% 0%);
+                                    transition: 2.5s linear;
+                                    transition-delay: 1.5s;
+                                }
+                                li{
+                                    width: 20%; text-align: center;
+                                    @include font($w: 700, $s: 14px, $f: "Lexend", $c: #fff);
+                                    opacity: 0;
+                                    transition: 1s;
+                                    transition-delay: 1.5s;
+                                    position: relative;
+                                    &:nth-of-type(2){transition-delay: 2s;}
+                                    &:nth-of-type(3){transition-delay: 2.5s;}
+                                    &:nth-of-type(4){transition-delay: 3s;}
+                                    &:nth-of-type(5){transition-delay: 3.5s;}
+                                    //timeline dot
+                                    &::after{
+                                        content: "";
+                                        width: 6px; height: 6px;
+                                        border-radius: 3px;
+                                        background: #fff;
+                                        position: absolute; bottom: -50px; left: 50%; margin-left: -2px;
+
+                                    }
+                                }
                             }
-                            p{
-                                @include font($w: 600, $s: 16px, $f: "Lexend", $c: #fff);
-                                padding-bottom: 20px;
-                            }
-                            span{
-                                display: block;
-                                @include font($s: 14px, $lh: 1.75, $c: rgba(255, 255, 255, 0.7));
-                                padding-bottom: 10px;
-                            }
-                            a{
-                                display: inline-block;
-                                @include font($s: 13px, $lh: 1.75,$f: "Lexend", $c: #fff);
-                                border-bottom: 1px solid transparent;
-                                box-sizing: border-box;
-                                transition: 0.3s;
-                                &:hover{
-                                    border-bottom: 1px solid #fff;
+                            .txt{
+                                width: 100%; height: 100%;
+                                display: flex; justify-content: space-between; 
+                                li{
+                                    width: 20%;
+                                    padding: 50px ; box-sizing: border-box;
+                                    padding-bottom: 0;
+                                    text-align: center;
+                                    transform: rotate(45deg); opacity: 0;
+                                    transform-origin: left bottom;
+                                    transition: 1s;
+                                    transition-delay: 1.5s;
+                                    &:nth-of-type(2){transition-delay: 2s;}
+                                    &:nth-of-type(3){transition-delay: 2.5s;}
+                                    &:nth-of-type(4){transition-delay: 3s;}
+                                    &:nth-of-type(5){transition-delay: 3.5s;}
+
+                                    p{
+                                        @include font($w: 500, $s: 21px, $f: "Lexend", $c: #fff);
+                                        padding-bottom: 20px;
+                                    }
+                                    span{
+                                        @include font($s: 14px, $f: "Lexend", $c: rgba(255, 255,255, 0.7));
+                                        
+                                    }
                                 }
                             }
                         }
+                        
                     }
                 }
                 &.third{
@@ -236,63 +282,57 @@ h1{
                                 width: 80px; 
                                 position: absolute; bottom: 10px; right: 20px;
                             }
-                            &.b1{top: 30px; left: 130px; transition-delay: 1s;}
-                            &.b2{top: 30px; right: 130px; transition-delay: 1.1s;}
-                            &.b3{bottom: 200px; right: 0px; transition-delay: 1.2s;}
-                            &.b4{bottom: -10px; left:50%; margin-left: -200px; transition-delay: 1.3s;}
-                            &.b5{bottom: 200px; left: 0px; transition-delay: 1.4s;}
+                            &.b1{top: 30px; left: 130px; transition-delay: 1.6s;}
+                            &.b2{top: 30px; right: 130px; transition-delay: 1.7s;}
+                            &.b3{bottom: 200px; right: 0px; transition-delay: 1.8s;}
+                            &.b4{bottom: -10px; left:50%; margin-left: -200px; transition-delay: 1.9s;}
+                            &.b5{bottom: 200px; left: 0px; transition-delay: 2s;}
                         }
                     }
-                }
+                }           
                 &.fourth{
-                    padding: 50px 150px; box-sizing: border-box;
-                    .project{
-                        position: relative;
-                        width: 100%; height: 100%;
-                        border-radius: 20px;
-                        background: rgba(0, 0, 0, 0.1);
-                        backdrop-filter: blur(10px);
+                    .trending{
+                        position: absolute; top: 50px; left: 13vw;
                         >h3{
-                            position: absolute; 
-                            top: 50px; left: 50%; transform: translateX(-50%);
-                            span{
-                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
-                                // transform: scale(2); opacity: 0;
-                                transition: 0.3s;
-                            }
+                            @include font($w: bold, $s: 32px, $f: "Lexend", $c: #fff);
+                            padding-bottom: 30px;
                         }
-                        ul{
-                            width: 100%; height: 100%;
-                            position: absolute; top: 55%; left: 0; transform: translateY(-50%);
-                            display: flex; justify-content: space-between; align-items: center;
-                            &::after{
-                                content: "";
-                                width: 80%; height: 1px; 
-                                position: absolute; top: 45%; left: 50%; transform: translateX(-50%);
-                                border-top: 3px dotted #fff;
-                                opacity: 0.2;
+                        .wrap{
+                            width: 400px; 
+                            padding: 20px; box-sizing: border-box;
+                            border-radius: 5px;
+                            background: rgba(255, 255, 255, 0.05);
+                            backdrop-filter: blur(10px);
+                            margin-bottom: 10px;
+                            img{
+                                display: block;
+                                width: 100%; height: 150px;
+                                margin-bottom: 10px;
+                                border-radius: 5px;
+                                object-fit: cover;
                             }
-                            li{
-                                width: 20%;
-                                padding: 30px; box-sizing: border-box;
-                                text-align: center;
-                                .signpost{
-                                    @include font($w: 700, $s: 14px, $f: "Lexend", $c: #fff);
-                                    padding-bottom: 100px;
-                                }
-                                p{
-                                    @include font($w: 500, $s: 21px, $f: "Lexend", $c: #fff);
-                                    padding-bottom: 20px;
-                                }
-                                span{
-                                    @include font($s: 14px, $f: "Lexend", $c: rgba(255, 255,255, 0.7));
-                                    
+                            p{
+                                @include font($w: 600, $s: 16px, $f: "Lexend", $c: #fff);
+                                padding-bottom: 20px;
+                            }
+                            span{
+                                display: block;
+                                @include font($s: 14px, $lh: 1.75, $c: rgba(255, 255, 255, 0.7));
+                                padding-bottom: 10px;
+                            }
+                            a{
+                                display: inline-block;
+                                @include font($s: 13px, $lh: 1.75,$f: "Lexend", $c: #fff);
+                                border-bottom: 1px solid transparent;
+                                box-sizing: border-box;
+                                transition: 0.3s;
+                                &:hover{
+                                    border-bottom: 1px solid #fff;
                                 }
                             }
                         }
                     }
                 }
-                
                 
             }
             &.swiper-slide-active{
@@ -306,17 +346,27 @@ h1{
                         span{transform: translateY(0px); opacity: 1;}
                     }
                 } 
+                .second{
+                    .project{
+                        >h3 span{transform: rotate(0); opacity: 1;}
+                        .wrap{
+                            .signpost{
+                                &::after{clip-path: inset(0% 0% 0% 0%);}
+                                li{opacity: 1}
+                            } 
+                            .txt li{
+                                transform: rotate(0deg); opacity: 1;
+                            }
+                        }
+                    }
+                }
                 .third{
                     .motivate{
                         >h3 span{transform: scale(1); opacity: 1;}
                         .balloon{transform: scale(1); opacity: 1;}
                     }
                 }
-                .fourth{
-                    .project{
-                        // >h3 span{transform: scale(1); opacity: 1;}
-                    }
-                }
+                
                 
             } 
 

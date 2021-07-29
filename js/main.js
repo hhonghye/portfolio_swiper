@@ -31,7 +31,7 @@ const h3 = document.querySelectorAll(".inner div h3");
 
 /*----- function -----*/
 for(el of h3){
-    letter(el, 0.1);
+    letter(el, 0.2);
 }
 /*----- event -----*/
 prev.addEventListener("click", changeBg);
