@@ -342,6 +342,73 @@ h1 {
                 bottom: 200px;
                 left: 0px;
                 transition-delay: 1.4s; }
+        #swiper-container .swiper-wrapper .swiper-slide .inner.fourth {
+          padding: 50px 150px;
+          box-sizing: border-box; }
+          #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px); }
+            #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project > h3 {
+              position: absolute;
+              top: 50px;
+              left: 50%;
+              transform: translateX(-50%); }
+              #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project > h3 span {
+                font-weight: bold;
+                font-size: 52px;
+                line-height: 1;
+                font-family: "Lexend";
+                color: #fff;
+                transition: 0.3s; }
+            #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 55%;
+              left: 0;
+              transform: translateY(-50%);
+              display: flex;
+              justify-content: space-between;
+              align-items: center; }
+              #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul::after {
+                content: "";
+                width: 80%;
+                height: 1px;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                transform: translateX(-50%);
+                border-top: 3px dotted #fff;
+                opacity: 0.2; }
+              #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li {
+                width: 20%;
+                padding: 30px;
+                box-sizing: border-box;
+                text-align: center; }
+                #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li .signpost {
+                  font-weight: 700;
+                  font-size: 14px;
+                  line-height: 1;
+                  font-family: "Lexend";
+                  color: #fff;
+                  padding-bottom: 100px; }
+                #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li p {
+                  font-weight: 500;
+                  font-size: 21px;
+                  line-height: 1;
+                  font-family: "Lexend";
+                  color: #fff;
+                  padding-bottom: 20px; }
+                #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li span {
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 1;
+                  font-family: "Lexend";
+                  color: rgba(255, 255, 255, 0.7); }
       #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .first .side, #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .first .sideSns {
         opacity: 1; }
       #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .first .intro h2 span {

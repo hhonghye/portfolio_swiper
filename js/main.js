@@ -1,4 +1,4 @@
-const menu = ["PROJECTS", "COLLECTION", "VIDEOS", "CONTACT"];
+const menu = ["first", "second", "third", "fourth"];
 //swiper 연결
 const swiper = new Swiper('#swiper-container', {
     loop: true, 
