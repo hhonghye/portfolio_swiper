@@ -118,7 +118,7 @@ h1{
                         }
                         p{
                             width: 500px;
-                            @include font($s: 14px, $lh: 1.75,$c: rgba(255, 255, 255, 0.7));
+                            @include font($s: 14px, $lh: 1.75,$c: #fff);
                             transform: translateY(30px);
                             opacity: 0;
                             transition: transform 0.5s 1.4s, opacity 0.5s 1.4s;
@@ -131,7 +131,7 @@ h1{
                             border: 1px solid rgba(255, 255, 255, 0.7);
                             box-sizing: border-box;
                             cursor: pointer;
-                            @include font($s: 14px, $lh: 1.75,$f: "Lexend", $c: rgba(255, 255, 255, 0.7));
+                            @include font($s: 14px, $lh: 1.75,$f: "Lexend", $c: #fff);
                             opacity: 0;
                             transform: translateY(30px);
                             transition: transform 0.5s 1.6s, opacity 0.5s 1.6s;
@@ -140,7 +140,7 @@ h1{
                                 content: "view detail";
                                 position: absolute; top: 0; left: 0;
                                 width: 100%; height: 100%;
-                                @include font($s: 14px, $lh: 2.5,$f: "Lexend", $c: rgba(0, 0, 0, 0.7));
+                                @include font($s: 14px, $lh: 2.5,$f: "Lexend", $c: rgba(0, 0, 0, 0.5));
                                 text-align: center;
                                 background: #fff; 
                                 border-radius: 30px;
@@ -154,12 +154,111 @@ h1{
                 }
                 &.second{
                     padding: 50px 150px; box-sizing: border-box;
+                    .project{
+                        position: relative;
+                        width: 100%; height: 100%;
+                        >h3{
+                            position: absolute; 
+                            top: 50px; left: 50%; transform: translateX(-50%);
+                            span{
+                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
+                                opacity: 0;
+                                transition: 0.3s;
+                            }
+                        }
+                        ul{
+                            width: 100%; height: 100%;
+                            display: flex; justify-content: space-between; align-items: flex-end;
+                            li{
+                                width: calc(100% / 3);
+                                border-radius: 20px;
+                                background: rgba(0, 0, 0, 0.1);
+                                backdrop-filter: blur(10px);
+                                box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
+                                margin: 0 20px;
+                                padding: 30px; box-sizing: border-box;
+                                text-align: center;
+                                animation: updown 4s ease infinite;
+                                .emoji{font-size: 42px;}
+                                p{
+                                    @include font($w: 700, $s: 21px, $f: "Lexend", $c: #fff);
+                                    padding: 30px 0 20px;
+                                }
+                                span{
+                                    display: inline-block;
+                                    @include font($s: 14px, $lh:1.75, $c: rgba(255, 255, 255, 0.7));
+                                    padding: 0 30px 10px;
+                                }
+
+                                &:nth-of-type(2){
+                                    margin-bottom: 75px;
+                                    animation-delay: 0.2s;
+                                }
+                                &:nth-of-type(3){
+                                    margin-bottom: 150px;
+                                    animation-delay: 0.4s;
+                                }
+                            }
+                        }
+                         
+                    }
+                }
+                &.third{
+                    padding: 0 130px; box-sizing: border-box;
+                    .motivate{
+                        position: relative;
+                        width: 100%; height: 100%;
+                        >h3{
+                            position: absolute; 
+                            top: 50%; left: 50%; transform: translate(-50%, -50%);
+                            span{
+                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
+                                transform: scale(2); opacity: 0;
+                                transition: 0.3s;
+                            }
+                        }
+                        .balloon{
+                            width: 400px; 
+                            background: rgba(0, 0, 0, 0.1);
+                            backdrop-filter: blur(10px);
+                            border-radius: 10px;
+                            position: absolute;
+                            padding: 35px; padding-bottom: 40px; box-sizing:border-box;
+                            box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
+                            @include font( $s: 16px, $lh: 1.75, $f: "Lexend", $c: #eee);
+                            transform: scale(1.5); opacity: 0;
+                            transition: 0.2s;
+                            //balloon arrow
+                            &::after{
+                                content: "";
+                                border-top: 15px solid rgba(77, 77, 77, 0.1);
+                                border-left: 15px solid transparent;
+                                border-right: 15px solid transparent;
+                                border-bottom: 0px solid transparent;
+                                position: absolute; bottom: -15px; left: 300px;
+                            }
+                            strong{
+                                display: block;
+                                padding-top: 10px;
+                            }
+                            img{
+                                width: 80px; 
+                                position: absolute; bottom: 10px; right: 20px;
+                            }
+                            &.b1{top: 30px; left: 130px; transition-delay: 1.6s;}
+                            &.b2{top: 30px; right: 130px; transition-delay: 1.7s;}
+                            &.b3{bottom: 200px; right: 0px; transition-delay: 1.8s;}
+                            &.b4{bottom: -10px; left:50%; margin-left: -200px; transition-delay: 1.9s;}
+                            &.b5{bottom: 200px; left: 0px; transition-delay: 2s;}
+                        }
+                    }
+                }           
+                &.fourth{
+                    padding: 50px 150px; box-sizing: border-box;
                     .approach{
                         position: relative;
                         width: 100%; height: 100%;
                         border-radius: 20px;
-                        // background: rgba(0, 0, 0, 0.1);
-                        // backdrop-filter: blur(10px);
                         >h3{
                             position: absolute; 
                             top: 50px; left: 50%; transform: translateX(-50%);
@@ -228,117 +327,17 @@ h1{
                                     &:nth-of-type(5){transition-delay: 3.5s;}
 
                                     p{
-                                        @include font($w: 500, $s: 21px, $f: "Lexend", $c: #fff);
+                                        @include font($w: 700, $s: 21px, $f: "Lexend", $c: #fff);
                                         padding-bottom: 20px;
                                     }
                                     span{
-                                        @include font($s: 14px, $lh: 1.75, $c: rgba(255, 255,255, 0.7));
+                                        @include font($s: 14px, $lh: 1.75, $c: #fff);
                                         
                                     }
                                 }
                             }
                         }
                         
-                    }
-                }
-                &.third{
-                    padding: 0 130px; box-sizing: border-box;
-                    .motivate{
-                        position: relative;
-                        width: 100%; height: 100%;
-                        >h3{
-                            position: absolute; 
-                            top: 50%; left: 50%; transform: translate(-50%, -50%);
-                            span{
-                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
-                                transform: scale(2); opacity: 0;
-                                transition: 0.3s;
-                            }
-                        }
-                        .balloon{
-                            width: 400px; 
-                            background: rgba(255, 255, 255, 0.1);
-                            backdrop-filter: blur(10px);
-                            border-radius: 10px;
-                            position: absolute;
-                            padding: 35px; padding-bottom: 40px; box-sizing:border-box;
-                            box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
-                            @include font( $s: 16px, $lh: 1.75, $f: "Lexend", $c: #ddd);
-                            transform: scale(1.5); opacity: 0;
-                            transition: 0.2s;
-                            &::after{
-                                content: "";
-                                border-top: 15px solid rgba(255, 255, 255, 0.11);
-                                border-left: 15px solid transparent;
-                                border-right: 15px solid transparent;
-                                border-bottom: 0px solid transparent;
-                                position: absolute; bottom: -15px; left: 300px;
-                            }
-                            strong{
-                                display: block;
-                                padding-top: 10px;
-                            }
-                            img{
-                                width: 80px; 
-                                position: absolute; bottom: 10px; right: 20px;
-                            }
-                            &.b1{top: 30px; left: 130px; transition-delay: 1.6s;}
-                            &.b2{top: 30px; right: 130px; transition-delay: 1.7s;}
-                            &.b3{bottom: 200px; right: 0px; transition-delay: 1.8s;}
-                            &.b4{bottom: -10px; left:50%; margin-left: -200px; transition-delay: 1.9s;}
-                            &.b5{bottom: 200px; left: 0px; transition-delay: 2s;}
-                        }
-                    }
-                }           
-                &.fourth{
-                    padding: 50px 150px; box-sizing: border-box;
-                    .project{
-                        position: relative;
-                        width: 100%; height: 100%;
-                        >h3{
-                            position: absolute; 
-                            top: 50px; left: 50%; transform: translateX(-50%);
-                            span{
-                                @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
-                                opacity: 0;
-                                transition: 0.3s;
-                            }
-                        }
-                        ul{
-                            width: 100%; height: 100%;
-                            display: flex; justify-content: space-between; align-items: flex-end;
-                            li{
-                                width: calc(100% / 3);
-                                border-radius: 20px;
-                                background: rgba(0, 0, 0, 0.1);
-                                backdrop-filter: blur(10px);
-                                box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
-                                margin: 0 20px;
-                                padding: 30px; box-sizing: border-box;
-                                text-align: center;
-                                animation: updown 4s ease infinite;
-                                .emoji{font-size: 42px;}
-                                p{
-                                    @include font($w: 700, $s: 21px, $f: "Lexend", $c: #fff);
-                                    padding: 30px 0 20px;
-                                }
-                                span{
-                                    display: inline-block;
-                                    @include font($s: 14px, $lh:1.75, $c: rgba(255, 255, 255, 0.7));
-                                    padding: 0 30px 10px;
-                                }
-
-                                &:nth-of-type(2){
-                                    margin-bottom: 75px;
-                                    animation-delay: 0.2s;
-                                }
-                                &:nth-of-type(3){
-                                    margin-bottom: 150px;
-                                    animation-delay: 0.4s;
-                                }
-                            }
-                        }
-                         
                     }
                 }
                 
@@ -350,11 +349,22 @@ h1{
                     }
                     .intro{
                         h2 span{clip-path: inset(0% 0% 0% 0%); opacity: 1;}
-                        p{transform: translateY(0px); opacity: 0.7;}
+                        p{transform: translateY(0px); opacity: 1;}
                         span{transform: translateY(0px); opacity: 1;}
                     }
                 } 
                 .second{
+                    .project{
+                        >h3 span{opacity: 1;}
+                    }
+                }
+                .third{
+                    .motivate{
+                        >h3 span{transform: scale(1); opacity: 1;}
+                        .balloon{transform: scale(1); opacity: 1;}
+                    }
+                }
+                .fourth{
                     .approach{
                         >h3 span{transform: rotate(0); opacity: 1;}
                         .wrap{
@@ -368,17 +378,6 @@ h1{
                         }
                     }
                 }
-                .third{
-                    .motivate{
-                        >h3 span{transform: scale(1); opacity: 1;}
-                        .balloon{transform: scale(1); opacity: 1;}
-                    }
-                }
-                .fourth{
-                    .project{
-                        >h3 span{opacity: 1;}
-                    }
-                }
                 
                 
             } 
@@ -389,6 +388,7 @@ h1{
 
     .swiper-button-prev, .swiper-button-next{
         width: 48px; height: 48px;
+        transform: rotate(90deg);
         &::before{
             content: "";
             position: absolute; top: 0; left: 0;
@@ -409,15 +409,16 @@ h1{
             animation: rotate 1s ease infinite;
         }
     } 
-    .swiper-button-prev{top: auto; left: auto; bottom: 80px; right: 250px;}
-    .swiper-button-next{top: auto; left: auto; bottom: 80px; right: 150px;}
+    .swiper-button-prev{top: auto; left: auto; bottom: 150px; right: 130px;}
+    .swiper-button-next{top: auto; left: auto; bottom: 80px; right: 130px;}
     .swiper-pagination{
         position: absolute;
         top: 80px; right: 80px; bottom: auto;
-        // top: 65px; left: 150px; bottom: auto;
         width: auto;
         text-align: right;
+        &::after{content: ""; display: block; clear: both;}
         span{
+            float: left;
             width: auto; height: auto; border-radius: none;
             background: transparent;
             margin-left: 30px;
@@ -426,7 +427,8 @@ h1{
             padding-bottom: 5px;
             border-bottom: 2px solid transparent;
             transition: 0.5s;
-            @include font($w: 400, $s: 12px, $c: #fff);
+            @include font($w: 400, $s: 14px, $c: #fff);
+            letter-spacing: 1px;
         }
         .swiper-pagination-bullet-active{
             border-bottom: 2px solid #fff;

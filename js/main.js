@@ -1,12 +1,11 @@
-const menu = ["first", "second", "third", "fourth"];
+const menu = ["main", "project", "motivate", "approch"];
 //swiper 연결
 const swiper = new Swiper('#swiper-container', {
-    // direction: "vertical",
+    direction: "vertical",
     loop: true, 
     centeredSlides: true,
     slidesPerView: 'auto', //동시에 보여줄 슬라이드 갯수 
     mousewheel: true,
-    // grabCursor: true,
 
     navigation: {
         nextEl: ".swiper-button-next",
