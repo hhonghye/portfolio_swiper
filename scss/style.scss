@@ -176,7 +176,7 @@ h1{
                                 backdrop-filter: blur(10px);
                                 box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
                                 margin: 0 20px;
-                                padding: 30px; box-sizing: border-box;
+                                padding: 40px; box-sizing: border-box;
                                 text-align: center;
                                 animation: updown 4s ease infinite;
                                 .emoji{font-size: 42px;}
@@ -187,7 +187,7 @@ h1{
                                 span{
                                     display: inline-block;
                                     @include font($s: 14px, $lh:1.75, $c: rgba(255, 255, 255, 0.7));
-                                    padding: 0 30px 10px;
+                                    padding: 0 20px;
                                 }
 
                                 &:nth-of-type(2){
@@ -271,6 +271,14 @@ h1{
                         }
                         .wrap{
                             position: absolute; top: 60%; left: 0; transform: translateY(-50%);
+                            padding: 60px 0; box-sizing: border-box;
+                            background: rgba(0, 0, 0, 0.1);
+                            box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
+                            backdrop-filter: blur(10px);
+                            border-radius: 10px;
+                            opacity: 0;
+                            transition: 0.2s;
+                            transition-delay: 1.5s;
                             .signpost{
                                 width: 100%;
                                 display: flex; justify-content: space-between; 
@@ -289,7 +297,7 @@ h1{
                                 }
                                 li{
                                     width: 20%; text-align: center;
-                                    @include font($w: 700, $s: 14px, $f: "Lexend", $c: #fff);
+                                    font-size: 42px;
                                     opacity: 0;
                                     transition: 1s;
                                     transition-delay: 1.5s;
@@ -368,6 +376,7 @@ h1{
                     .approach{
                         >h3 span{transform: rotate(0); opacity: 1;}
                         .wrap{
+                            opacity: 1;
                             .signpost{
                                 &::after{clip-path: inset(0% 0% 0% 0%);}
                                 li{opacity: 1}
