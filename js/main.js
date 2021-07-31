@@ -1,4 +1,4 @@
-const menu = ["main", "project", "motivate", "approch"];
+const menu = ["main", "project", "motivate", "approach"];
 //swiper 연결
 const swiper = new Swiper('#swiper-container', {
     direction: "vertical",

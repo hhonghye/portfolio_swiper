@@ -43,12 +43,11 @@ h1{
         width: 100%; height: 100%;
         .swiper-slide{
             width: 100%; height: 100%;
-            padding: 100px 0; box-sizing: border-box;
             overflow: hidden;
             .inner{
                 width: 100%; height: 100%; 
                 position: relative;
-                padding: 20px 200px; box-sizing: border-box;
+                padding: 150px 200px; box-sizing: border-box;
                 &.first{
                     .side{
                         position: absolute; top: 0; left: 0;
@@ -103,7 +102,7 @@ h1{
                         }
                     }
                     .intro{
-                        position: absolute; top: 15%; left: 20vw;
+                        position: absolute; top: 25%; left: 20vw;
                         >h2{
                             padding-bottom: 60px;
                             span{
@@ -155,20 +154,28 @@ h1{
                 }
                 &.second{
                     .project{
-                        position: relative;
                         width: 100%; height: 100%;
                         >h3{
-                            position: absolute; 
-                            top: 50px; left: 50%; transform: translateX(-50%);
+                            padding-top: 40px;
+                            text-align: center;
+                            position: relative;
                             span{
                                 @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
                                 opacity: 0;
                                 transition: 0.3s;
                             }
+                            &::before{
+                                position: absolute; top: 0; left: 0;
+                                width: 100%;
+                                content: "About";
+                                @include font($w: bold, $s: 38px, $f: "Lexend", $c: rgba(255, 255, 255, 0.3));
+                                opacity: 0;
+                                transition: 0.5s;
+                            }
                         }
                         ul{
                             width: 100%; height: 100%;
-                            display: flex; justify-content: space-between; align-items: flex-end;
+                            display: flex; justify-content: space-between; align-items: center;
                             li{
                                 width: calc(100% / 3);
                                 border-radius: 20px;
@@ -190,12 +197,14 @@ h1{
                                     padding: 0 20px;
                                 }
 
+                                &:nth-of-type(1){
+                                    margin-bottom: -75px;
+                                }
                                 &:nth-of-type(2){
-                                    margin-bottom: 75px;
                                     animation-delay: 0.3s;
                                 }
                                 &:nth-of-type(3){
-                                    margin-bottom: 150px;
+                                    margin-bottom: 75px;
                                     animation-delay: 0.6s;
                                 }
                             }
@@ -204,7 +213,7 @@ h1{
                     }
                 }
                 &.third{
-                    padding: 0 130px;
+                    padding: 100px 130px;
                     .motivate{
                         position: relative;
                         width: 100%; height: 100%;
@@ -255,22 +264,29 @@ h1{
                 }           
                 &.fourth{
                     .approach{
-                        position: relative;
                         width: 100%; height: 100%;
-                        border-radius: 20px;
                         >h3{
-                            position: absolute; 
-                            top: 50px; left: 50%; transform: translateX(-50%);
+                            padding-top: 40px;
+                            text-align: center;
+                            position: relative;
                             span{
                                 @include font($w: bold, $s: 52px, $f: "Lexend", $c: #fff);
                                 transform: rotate(45deg); opacity: 0;
                                 transform-origin: left bottom;
                                 transition: 0.3s;
                             }
+                            &::before{
+                                position: absolute; top: 0; left: 0;
+                                width: 100%;
+                                content: "It's worth";
+                                @include font($w: bold, $s: 38px, $f: "Lexend", $c: rgba(255, 255, 255, 0.3));
+                                opacity: 0;
+                                transition: 0.5s;
+                            }
                         }
                         .wrap{
-                            position: absolute; top: 28%; left: 0;
                             padding: 60px 0; box-sizing: border-box;
+                            margin-top: 80px;
                             background: rgba(0, 0, 0, 0.1);
                             box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
                             backdrop-filter: blur(10px);
@@ -362,7 +378,10 @@ h1{
                 } 
                 .second{
                     .project{
-                        >h3 span{opacity: 1;}
+                        >h3{
+                            span{opacity: 1;}
+                            &::before{opacity: 1;}
+                        }
                     }
                 }
                 .third{
@@ -373,7 +392,10 @@ h1{
                 }
                 .fourth{
                     .approach{
-                        >h3 span{transform: rotate(0); opacity: 1;}
+                        >h3{
+                           span{transform: rotate(0); opacity: 1;} 
+                           &::before{opacity: 1;}
+                        } 
                         .wrap{
                             opacity: 1;
                             .signpost{
