@@ -1,6 +1,7 @@
 const menu = ["first", "second", "third", "fourth"];
 //swiper 연결
 const swiper = new Swiper('#swiper-container', {
+    // direction: "vertical",
     loop: true, 
     centeredSlides: true,
     slidesPerView: 'auto', //동시에 보여줄 슬라이드 갯수 

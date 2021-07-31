@@ -47,22 +47,22 @@ h1 {
     #swiper-container .background li.on {
       opacity: 1; }
     #swiper-container .background li:nth-of-type(1) {
-      background-image: url(../img/bg1.jpg);
+      background-image: url(../img/bg-v2/bg1.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     #swiper-container .background li:nth-of-type(2) {
-      background-image: url(../img/bg2.jpg);
+      background-image: url(../img/bg-v2/bg2.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     #swiper-container .background li:nth-of-type(3) {
-      background-image: url(../img/bg3.jpg);
+      background-image: url(../img/bg-v2/bg3.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
     #swiper-container .background li:nth-of-type(4) {
-      background-image: url(../img/bg4.jpg);
+      background-image: url(../img/bg-v2/bg4.jpg);
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; }
@@ -215,19 +215,17 @@ h1 {
         #swiper-container .swiper-wrapper .swiper-slide .inner.second {
           padding: 50px 150px;
           box-sizing: border-box; }
-          #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch {
+          #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach {
             position: relative;
             width: 100%;
             height: 100%;
-            border-radius: 20px;
-            background: rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px); }
-            #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch > h3 {
+            border-radius: 20px; }
+            #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach > h3 {
               position: absolute;
               top: 50px;
               left: 50%;
               transform: translateX(-50%); }
-              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch > h3 span {
+              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach > h3 span {
                 font-weight: bold;
                 font-size: 52px;
                 line-height: 1;
@@ -237,18 +235,18 @@ h1 {
                 opacity: 0;
                 transform-origin: left bottom;
                 transition: 0.3s; }
-            #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap {
+            #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap {
               position: absolute;
               top: 60%;
               left: 0;
               transform: translateY(-50%); }
-              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost {
+              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost {
                 width: 100%;
                 display: flex;
                 justify-content: space-between;
                 padding-bottom: 50px;
                 position: relative; }
-                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost::after {
+                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost::after {
                   content: "";
                   width: 80%;
                   height: 1px;
@@ -261,7 +259,7 @@ h1 {
                   clip-path: inset(0% 100% 0% 0%);
                   transition: 2.5s linear;
                   transition-delay: 1.5s; }
-                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li {
+                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li {
                   width: 20%;
                   text-align: center;
                   font-weight: 700;
@@ -273,15 +271,15 @@ h1 {
                   transition: 1s;
                   transition-delay: 1.5s;
                   position: relative; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li:nth-of-type(2) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li:nth-of-type(2) {
                     transition-delay: 2s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li:nth-of-type(3) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li:nth-of-type(3) {
                     transition-delay: 2.5s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li:nth-of-type(4) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li:nth-of-type(4) {
                     transition-delay: 3s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li:nth-of-type(5) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li:nth-of-type(5) {
                     transition-delay: 3.5s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .signpost li::after {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .signpost li::after {
                     content: "";
                     width: 6px;
                     height: 6px;
@@ -291,12 +289,12 @@ h1 {
                     bottom: -50px;
                     left: 50%;
                     margin-left: -2px; }
-              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt {
+              #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt {
                 width: 100%;
                 height: 100%;
                 display: flex;
                 justify-content: space-between; }
-                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li {
+                #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li {
                   width: 20%;
                   padding: 50px;
                   box-sizing: border-box;
@@ -307,22 +305,22 @@ h1 {
                   transform-origin: left bottom;
                   transition: 1s;
                   transition-delay: 1.5s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li:nth-of-type(2) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li:nth-of-type(2) {
                     transition-delay: 2s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li:nth-of-type(3) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li:nth-of-type(3) {
                     transition-delay: 2.5s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li:nth-of-type(4) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li:nth-of-type(4) {
                     transition-delay: 3s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li:nth-of-type(5) {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li:nth-of-type(5) {
                     transition-delay: 3.5s; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li p {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li p {
                     font-weight: 500;
                     font-size: 21px;
                     line-height: 1;
                     font-family: "Lexend";
                     color: #fff;
                     padding-bottom: 20px; }
-                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approch .wrap .txt li span {
+                  #swiper-container .swiper-wrapper .swiper-slide .inner.second .approach .wrap .txt li span {
                     font-weight: normal;
                     font-size: 14px;
                     line-height: 1.75;
@@ -438,26 +436,27 @@ h1 {
                 backdrop-filter: blur(10px);
                 box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
                 margin: 0 20px;
-                padding: 40px;
+                padding: 30px;
                 box-sizing: border-box;
                 text-align: center;
                 animation: updown 4s ease infinite; }
-                #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li svg {
-                  font-size: 24px;
-                  color: #fff; }
+                #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li .emoji {
+                  font-size: 42px; }
                 #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li p {
                   font-weight: 700;
                   font-size: 21px;
                   line-height: 1;
                   font-family: "Lexend";
                   color: #fff;
-                  padding: 40px 0 20px; }
+                  padding: 30px 0 20px; }
                 #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li span {
+                  display: inline-block;
                   font-weight: normal;
                   font-size: 14px;
                   line-height: 1.75;
                   font-family: arial;
-                  color: rgba(255, 255, 255, 0.7); }
+                  color: rgba(255, 255, 255, 0.7);
+                  padding: 0 30px 10px; }
                 #swiper-container .swiper-wrapper .swiper-slide .inner.fourth .project ul li:nth-of-type(2) {
                   margin-bottom: 75px;
                   animation-delay: 0.2s; }
@@ -475,14 +474,14 @@ h1 {
       #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .first .intro span {
         transform: translateY(0px);
         opacity: 1; }
-      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approch > h3 span {
+      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approach > h3 span {
         transform: rotate(0);
         opacity: 1; }
-      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approch .wrap .signpost::after {
+      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approach .wrap .signpost::after {
         clip-path: inset(0% 0% 0% 0%); }
-      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approch .wrap .signpost li {
+      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approach .wrap .signpost li {
         opacity: 1; }
-      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approch .wrap .txt li {
+      #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .second .approach .wrap .txt li {
         transform: rotate(0deg);
         opacity: 1; }
       #swiper-container .swiper-wrapper .swiper-slide.swiper-slide-active .third .motivate > h3 span {
