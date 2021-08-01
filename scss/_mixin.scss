@@ -1,3 +1,6 @@
+$tablet:1179px; 
+$mobile:599px; 
+
 @mixin font($w: normal, $s: 16px, $lh: 1, $f: arial, $c: #121212){
     font-weight: $w;
     font-size: $s;

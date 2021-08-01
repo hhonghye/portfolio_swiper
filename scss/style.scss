@@ -29,8 +29,6 @@ h1{
         width: 100%; height: 100%;
         transition: opacity 0.3s;
         opacity: 0;
-        background: #0F1015;
-        // background: rgb(255, 255, 255);
         &.on{opacity: 1;}
 
         &:nth-of-type(1){@include bg($img: url(../img/bg-v2/bg1.jpg))}
@@ -182,7 +180,7 @@ h1{
                                 background: rgba(0, 0, 0, 0.1);
                                 backdrop-filter: blur(10px);
                                 box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
-                                margin: 0 20px;
+                                margin: 0 10px;
                                 padding: 40px; box-sizing: border-box;
                                 text-align: center;
                                 animation: updown 4s ease infinite;
@@ -213,7 +211,7 @@ h1{
                     }
                 }
                 &.third{
-                    padding: 100px 130px;
+                    padding: 100px 5vw;
                     .motivate{
                         position: relative;
                         width: 100%; height: 100%;
@@ -290,7 +288,7 @@ h1{
                             background: rgba(0, 0, 0, 0.1);
                             box-shadow: 5px 15px 18px rgba(0, 0, 0, 0.08);
                             backdrop-filter: blur(10px);
-                            border-radius: 10px;
+                            border-radius: 20px;
                             opacity: 0;
                             transition: 0.2s;
                             transition-delay: 1.5s;
@@ -443,7 +441,7 @@ h1{
     .swiper-button-next{top: auto; left: auto; bottom: 80px; right: 130px;}
     .swiper-pagination{
         position: absolute;
-        top: 80px; right: 80px; bottom: auto;
+        top: 100px; right: 80px; bottom: auto;
         width: auto;
         text-align: right;
         &::after{content: ""; display: block; clear: both;}
@@ -478,4 +476,128 @@ h1{
     0%{transform: translateY(0);}
     50%{transform: translateY(-60px);}
     100%{transform: translateY(0);}
+}
+
+/*---------- tablet ----------*/
+@media screen and (max-width: $tablet){
+h1{top: 50px; left: 50px;}
+#swiper-container{
+    .swiper-wrapper{
+        .swiper-slide{
+            .inner{
+                padding: 150px 20px;
+                &.first{
+                    .side{display: none;}
+                    .sideSns{display: none;}
+                    .intro{
+                        left: 15vw;
+                        >h2{
+                            span{font-size: 38px;}
+                        }
+                        p{width: 400px; font-size: 12px;}
+                    }
+                }
+                &.second{
+                    .project{
+                        >h3{
+                            padding-top: 30px;
+                            span{font-size: 38px;}
+                            &::before{font-size: 30px;}
+                        }
+                        ul{
+                            li{
+                                padding: 20px 20px 40px 20px;
+                                .emoji{font-size: 32px;}
+                                p{
+                                    font-size: 16px;
+                                    padding: 20px 0;
+                                }
+                                span{
+                                    font-size: 12px;
+                                    padding: 0;
+                                }
+                            }
+                        }
+                            
+                    }
+                }
+                &.third{
+                    padding: 200px 10vw;
+                    .motivate{
+                        >h3{
+                            top: -80px; transform: translateX(-50%);
+                            span{font-size: 38px;}
+                        }
+                        .balloon{
+                            width: 330px;
+                            padding: 16px; padding-bottom: 15px;
+                            margin-bottom: 10px;
+                            font-size: 12px;
+                            position: unset;
+                            &::after{left: 150px;}
+                            img{width: 50px; bottom: 16px; right: 30px;}
+                            &.b2{margin-left: auto;}
+                            &.b4{margin-left: auto;}
+                        }
+                    }
+                }           
+                &.fourth{
+                    .approach{
+                        >h3{
+                            padding-top: 30px;
+                            span{font-size: 38px;}
+                            &::before{font-size: 30px;}
+                        }
+                        .wrap{
+                            padding: 30px 0;
+                            margin-top: 100px;
+                            .signpost{
+                                padding-bottom: 20px;
+                                li{font-size: 32px;}
+                            }
+                            .txt{
+                                li{
+                                    padding: 30px;
+                                    p{
+                                        font-size: 16px;
+                                        padding-bottom: 20px;
+                                    }
+                                    span{
+                                        font-size: 12px;
+                                        
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                
+            }
+        }
+
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+        width: 44px; height: 44px;
+        &::before{border-radius: 30px;}
+        &::after{
+            margin-top: -6px; margin-left: -2px;
+            font-size: 16px;
+        }
+    } 
+    .swiper-button-prev{bottom: 120px; right: 50px;}
+    .swiper-button-next{bottom: 50px; right: 50px;}
+    .swiper-pagination{
+        top: 75px; right: 50px;
+        span{
+            margin-left: 20px;
+            font-size: 12px;
+        }
+    }
+}
+}
+
+/*---------- mobile ----------*/
+@media screen and (max-width: $mobile){
+
 }

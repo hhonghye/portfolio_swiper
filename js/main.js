@@ -69,6 +69,4 @@ function letter(el, interval){
         
     }
     elem.innerHTML = result;
-    console.log(elem);
-
 }
